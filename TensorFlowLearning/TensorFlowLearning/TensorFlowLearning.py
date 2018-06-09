@@ -1,27 +1,42 @@
-﻿import numpy as np
-import sys
-import os
-import tensorflow as tf
+﻿import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
 
-###################################################################
-# Variables                                                       #
-# When launching project or scripts from Visual Studio,           #
-# input_dir and output_dir are passed as arguments automatically. #
-# Users could set them from the project setting page.             #
-###################################################################
+#载入数据集
+mnist=input_data.read_data_sets('MNIST_data', one_hot=True)
 
-FLAGS = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_string("input_dir", ".", "Input directory where training dataset and meta data are saved")
-tf.app.flags.DEFINE_string("output_dir", ".", "Output directory where output such as logs are saved.")
-tf.app.flags.DEFINE_string("log_dir", ".", "Model directory where final model files are saved.")
+#每个批次大小
+batch_size=100
+#计算一共有多少个批次
+n_batch=mnist.train.num_examples
 
-def main(_):
-    # TODO: add your code here
-    with tf.Session() as sess:
-        welcome = sess.run(tf.constant("Hello, TensorFlow!"))
-        print(welcome)
-    exit(0)
+#定义两个placeholder
+x=tf.placeholder(tf.float32,[None,784])
+y = tf.placeholder(tf.float32, [None,10])
 
+#创建一个简单的神经网络
+W = tf.Variable(tf.zeros([784,10]))
+b = tf.Variable(tf.zeros([10]))
+prediction = tf.nn.softmax(tf.matmul(x,W)+b)
 
-if __name__ == "__main__":
-    tf.app.run()
+#二次代价函数
+loss = tf.reduce_mean(tf.square(y-prediction))
+#使用梯度下降法
+train_step = tf.train.GradientDescentOptimizer(0.02).minimize(loss)
+
+#初始化变量
+init=tf.global_variables_initializer()
+
+#结果存储在一个布尔型列表中
+correct_prediction = tf.equal(tf.argmax(y,1),tf.argmax(prediction,1)) #argmax返回一维张量中最大值所在的位置
+#求准确率
+accuracy = tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
+
+with tf.Session() as sess:
+    sess.run(init)
+    for epoch in range(21):
+        for batch in range(n_batch):
+            batch_xs,batch_ys = mnist.train.next_batch(batch_size)
+            sess.run(train_step, feed_dict={x:batch_xs,y:batch_ys})
+
+        acc = sess.run(accuracy , feed_dict={x:mnist.test.images, y:mnist.test.labels})
+        print("Iter"+str(epoch)+",Testing Accuracy "+str(acc))
