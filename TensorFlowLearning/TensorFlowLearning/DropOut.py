@@ -1,5 +1,8 @@
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
+import os 
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 #载入数据集
 mnist=input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -54,7 +57,12 @@ correct_prediction = tf.equal(tf.argmax(y,1),tf.argmax(prediction,1)) #argmax返
 #求准确率
 accuracy = tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
 
-with tf.Session() as sess:
+#分配可用内存
+#config = tf.ConfigProto()
+#config.gpu_options.allow_growth = True
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
+
+with tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) as sess:
     sess.run(init)
     for epoch in range(31):
         for batch in range(n_batch):
