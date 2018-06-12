@@ -23,25 +23,19 @@ lr=tf.Variable(0.001,dtype=tf.float32)
 #W = tf.Variable(tf.zeros([784,10]))
 #b = tf.Variable(tf.zeros([10]))
 #prediction = tf.nn.softmax(tf.matmul(x,W)+b)
-W1=tf.Variable(tf.truncated_normal([784,2000],stddev=0.1))
-b1 = tf.Variable(tf.zeros([2000])+0.1)
+W1=tf.Variable(tf.truncated_normal([784,500],stddev=0.1))
+b1 = tf.Variable(tf.zeros([500])+0.1)
 L1 = tf.nn.tanh(tf.matmul(x,W1)+b1)
 L1_drop = tf.nn.dropout(L1,keep_prob)
 
-W2=tf.Variable(tf.truncated_normal([2000,2000],stddev=0.1))
-b2 = tf.Variable(tf.zeros([2000])+0.1)
+W2=tf.Variable(tf.truncated_normal([500,300],stddev=0.1))
+b2 = tf.Variable(tf.zeros([300])+0.1)
 L2 = tf.nn.tanh(tf.matmul(L1_drop,W2)+b2)
 L2_drop = tf.nn.dropout(L2,keep_prob)
 
-W3=tf.Variable(tf.truncated_normal([2000,1000],stddev=0.1))
-b3 = tf.Variable(tf.zeros([1000])+0.1)
-L3 = tf.nn.tanh(tf.matmul(L2_drop,W3)+b3)
-L3_drop = tf.nn.dropout(L3,keep_prob)
-
-W4=tf.Variable(tf.truncated_normal([1000,10],stddev=0.1))
-b4 = tf.Variable(tf.zeros([10])+0.1)
-prediction = tf.nn.softmax(tf.matmul(L3_drop,W4)+b4)
-
+W3=tf.Variable(tf.truncated_normal([300,10],stddev=0.1))
+b3 = tf.Variable(tf.zeros([10])+0.1)
+prediction = tf.nn.softmax(tf.matmul(L2_drop,W3)+b3)
 
 #二次代价函数
 #loss = tf.reduce_mean(tf.square(y-prediction))
@@ -49,7 +43,7 @@ prediction = tf.nn.softmax(tf.matmul(L3_drop,W4)+b4)
 loss=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y,logits=prediction))
 
 #使用梯度下降法
-train_step = tf.train.GradientDescentOptimizer(lr).minimize(loss)
+train_step = tf.train.AdamOptimizer(lr).minimize(loss)
 
 #初始化变量
 init=tf.global_variables_initializer()
