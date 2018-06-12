@@ -27,6 +27,9 @@
     <Compile Include="DropOut.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Tensorboard.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TensorFlowLearning.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
