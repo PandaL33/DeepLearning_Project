@@ -85,7 +85,7 @@ prediction = tf.nn.softmax(tf.matmul(h_fc1_drop,W_fc2)+b_fc2)
 #交叉熵代价函数
 cross_entropy=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y,logits=prediction))
 #使用AdamOptimizer进行优化
-train_step = tf.train.AdamOptimizer(le-4).minimize(cross_entropy)
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 #结果存储在一个布尔型列表中
 correct_prediction = tf.equal(tf.argmax(prediction,1),tf.argmax(y,1)) #argmax返回一维张量中最大值所在的位置
 #求准确率
