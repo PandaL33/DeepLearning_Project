@@ -6,7 +6,7 @@
     <ProjectGuid>fc89fe25-acc4-4e55-b970-75ff4eb8f8c9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{D22814C2-A430-4A53-8052-A3A64BFB2240};{888888A0-9F3D-457C-B088-3A5042F75D52}</ProjectTypeGuids>
-    <StartupFile>Tensorboard.py</StartupFile>
+    <StartupFile>TensorboardVariable.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,6 +28,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Tensorboard.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TensorboardVariable.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TensorFlowLearning.py" />
