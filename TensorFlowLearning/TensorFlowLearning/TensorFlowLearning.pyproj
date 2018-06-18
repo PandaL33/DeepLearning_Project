@@ -6,7 +6,7 @@
     <ProjectGuid>fc89fe25-acc4-4e55-b970-75ff4eb8f8c9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{D22814C2-A430-4A53-8052-A3A64BFB2240};{888888A0-9F3D-457C-B088-3A5042F75D52}</ProjectTypeGuids>
-    <StartupFile>RNN.py</StartupFile>
+    <StartupFile>InceptionV3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,9 +30,12 @@
     <Compile Include="DropOut.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="InceptionNet.py" />
+    <Compile Include="InceptionV3.py" />
     <Compile Include="RNN.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Saver.py" />
     <Compile Include="Tensorboard.py">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TensorFlowLearning.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="inception_log\" />
+    <Folder Include="inception_model\" />
+    <Folder Include="logs\" />
+    <Folder Include="logs\test\" />
+    <Folder Include="logs\train\" />
+    <Folder Include="MNIST_data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\cat.jpg" />
+    <Content Include="images\dog.jpg" />
+    <Content Include="images\plane.jpg" />
+    <Content Include="MNIST_data\t10k-images-idx3-ubyte.gz" />
+    <Content Include="MNIST_data\t10k-labels-idx1-ubyte.gz" />
+    <Content Include="MNIST_data\train-images-idx3-ubyte.gz" />
+    <Content Include="MNIST_data\train-labels-idx1-ubyte.gz" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
