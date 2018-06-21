@@ -32,6 +32,9 @@
     </Compile>
     <Compile Include="InceptionNet.py" />
     <Compile Include="InceptionV3.py" />
+    <Compile Include="RetrainTesting.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RNN.py">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,8 @@
     <Folder Include="logs\test\" />
     <Folder Include="logs\train\" />
     <Folder Include="MNIST_data\" />
+    <Folder Include="retrain\" />
+    <Folder Include="retrain\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\cat.jpg" />
