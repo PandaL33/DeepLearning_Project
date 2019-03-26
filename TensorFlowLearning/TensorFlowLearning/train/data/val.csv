@@ -1,0 +1,7 @@
+filename,width,height,class,xmin,ymin,xmax,ymax
+E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\bird09.jpg,683,683,bird,83,132,511,683
+E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\bird10.jpg,640,640,bird,192,253,557,619
+E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\cat09.jpg,1200,1200,cat,270,1,955,675
+E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\cat10.jpg,800,800,cat,213,403,615,1007
+E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\dog09.jpg,535,535,dog,126,1,487,562
+E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\dog10.jpg,1440,1440,dog,228,15,808,900

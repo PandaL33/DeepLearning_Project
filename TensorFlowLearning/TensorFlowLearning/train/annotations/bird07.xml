@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>bird07.jpg</filename>
+	<path>E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\bird07.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>666</width>
+		<height>1000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bird</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>132</xmin>
+			<ymin>112</ymin>
+			<xmax>523</xmax>
+			<ymax>685</ymax>
+		</bndbox>
+	</object>
+</annotation>

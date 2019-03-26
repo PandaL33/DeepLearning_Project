@@ -1,0 +1,40 @@
+item {
+  id:1
+  name:'helmet'
+}
+item {
+  id:2
+  name:'display'
+}
+item {
+  id:3
+  name:'blue chair'
+}
+item {
+  id:4
+  name:'garbage bin'
+}
+item {
+  id:5
+  name:'ping qian'
+}
+item {
+  id:6
+  name:'bo xian'
+}
+item {
+  id:7
+  name:'yi zi'
+}
+item {
+  id:8
+  name:'shi zi'
+}
+item {
+  id:9
+  name:'jian qian'
+}
+item {
+  id:10
+  name:'cuo dao'
+}

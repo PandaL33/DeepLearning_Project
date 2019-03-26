@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>cat10.jpg</filename>
+	<path>E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\cat10.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>1200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>213</xmin>
+			<ymin>403</ymin>
+			<xmax>615</xmax>
+			<ymax>1007</ymax>
+		</bndbox>
+	</object>
+</annotation>

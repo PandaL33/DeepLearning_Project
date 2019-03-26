@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>dog10.jpg</filename>
+	<path>E:\Tensorflow\DeepLearning_Project\TensorFlowLearning\TensorFlowLearning\train\images\dog10.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1440</width>
+		<height>900</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>228</xmin>
+			<ymin>15</ymin>
+			<xmax>808</xmax>
+			<ymax>900</ymax>
+		</bndbox>
+	</object>
+</annotation>
