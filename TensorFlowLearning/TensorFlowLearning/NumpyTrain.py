@@ -9,7 +9,7 @@ print(a.shape)
 print(a[0])
 
 #num3
-b=np.array([[4,5,6],[1,2,3]]).reshape(2,3)
+b=np.array([[4,5,6],[1,2,3]])
 print(b.shape)
 print(b[0,0],b[0,1],b[1,1])
 print(b[:,1])
