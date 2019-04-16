@@ -28,3 +28,14 @@ print(dd)
 e=np.arange(1,13,1).reshape(3,4)
 print(e)
 print(e[2,3],e[0,0])
+
+#num6
+f=e[0:2,2:4]
+print(f)
+print(f[:,1])
+print(f[0,0])
+
+#num7
+g=e[1:3,:]
+print(g)
+print(g[0,-1])
