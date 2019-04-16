@@ -1,3 +1,5 @@
+#numpy Tranin 
+#https://github.com/nndl/exercise/blob/master/warmup/numpy_%20tutorial.ipynb
 #num1
 import numpy as np 
 
